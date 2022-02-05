@@ -1,0 +1,214 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    max-width: 960px;
+    margin: auto;
+}
+h1 {
+    font-size: 3em;
+    letter-spacing: .6em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h2 {
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+
+main { 
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-top: 3em;
+}
+
+header {
+    text-align: center;
+    margin: auto 2em;
+}
+
+section {
+    margin: auto 1em 4em 2em;
+}
+
+i {
+    margin-right: .5em;
+}
+
+p {
+    margin: .2em auto
+}
+
+hr {
+    border: none;
+    background-color: lightgray;
+    height: 1px;
+}
+
+h1, h2 {
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+#mainLeft {
+    border-right: 1px solid lightgray;
+}
+
+
+/* My Changes: */
+
+h1 {letter-spacing: .5em; padding: .75em 0;}
+main {margin-top: 2.5em;}
+section {margin: auto 1em 3em 2em;}
+section {margin: auto 1em 2.5em 2em;}
+p {word-break: break-word;}
+/* i {min-width: 2em;} */
+
+body {
+    font-size: 14px;
+    overflow-x: hidden;
+    animation: showing 900ms normal 1 both 300ms;
+}
+@keyframes  showing {
+    0% {opacity: 0; }
+    100% {opacity: 1; }
+}
+
+h1 {animation: fromTop 1200ms normal 1 both 300ms;}
+
+section:nth-of-type(3n+1) {--delay: 300ms;}
+section:nth-of-type(3n+2) {--delay: 600ms;}
+section:nth-of-type(3n+3) {--delay: 900ms;}
+
+#mainLeft section {animation: fromLeft 1200ms normal 1 both var(--delay);}
+#mainRight section {animation: fromRight 1200ms normal 1 both var(--delay);}
+
+@keyframes  fromTop {
+    0% {opacity: 0; transform: translateY(-100%); }
+    100% {opacity: 1; transform: translateY(0%); }
+}
+@keyframes  fromLeft {
+    0% {opacity: 0; transform: translateX(-100%); }
+    100% {opacity: 1; transform: translateX(0%); }
+}
+@keyframes  fromRight {
+    0% {opacity: 0; transform: translateX(100%); }
+    100% {opacity: 1; transform: translateX(0%); }
+}
+
+@keyframes  scaleUp {
+    0% {opacity: 0; transform: scale(0); }
+    100% {opacity: 1; transform: scale(1); }
+}
+
+li:nth-of-type(1) {--delay: 1100ms;}
+li:nth-of-type(2) {--delay: 1200ms;}
+li:nth-of-type(3) {--delay: 1300ms;}
+li:nth-of-type(4) {--delay: 1400ms;}
+li:nth-of-type(5) {--delay: 1500ms;}
+li:nth-of-type(6) {--delay: 1600ms;}
+li:nth-of-type(7) {--delay: 1700ms;}
+li:nth-of-type(8) {--delay: 1800ms;}
+li:nth-of-type(9) {--delay: 1900ms;}
+li:nth-of-type(10) {--delay: 2000ms;}
+li:nth-of-type(11) {--delay: 2100ms;}
+li:nth-of-type(12) {--delay: 2200ms;}
+
+
+/* #mainLeft li {animation: fromLeft 1200ms normal 1 both var(--delay);} */
+#mainLeft li {animation: scaleUp 1200ms normal 1 both var(--delay);}
+#mainRight li {animation: fromRight 1200ms normal 1 both var(--delay);}
+
+/* Second Review */
+
+body {
+    position: relative;
+    height: 11in; width: 8.5in;
+    box-sizing: border-box;
+}
+h1 b {
+    display: block;
+    font-size: 3rem;
+    letter-spacing: .45em;
+}
+h1 {font-size: 2rem;}
+
+h2, h3 { transition: color 200ms ease-in-out; }
+section:hover h2,
+section:focus h2 { color: #06c; }
+h3:hover, h3:focus { color: #06c; }
+
+.skills {
+    min-width: 100%;
+    list-style-type: none;
+    margin: 0; padding: 0;
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+.skills li div {
+    background-color: #06c;
+    color: white;
+    padding: .5rem;
+    border-radius: .25rem;
+}
+
+#InterestsList {
+    list-style-type: none;
+    margin: 0rem; padding: 0rem;
+    border-radius: 1rem;
+    padding-left: 6px;
+}
+i {margin: 0;}
+.ifa {
+    width: 24px;
+    display: inline-block;
+    text-align: center;
+    font-size: 16px;
+    padding: .25rem;
+    border-radius: .25rem;
+    margin-right: .125rem;
+}
+li:hover .ifa, li:focus .ifa {
+    background-color: #06c;
+    color: white;
+}
+
+.shadow-effect {
+    position: absolute;
+    top: 0; left: 0;
+    height: 11in; width: 8.5in;
+    z-index: -1;
+
+    box-shadow: 0rem 0rem 0rem 0rem #1110;
+    transition:
+    box-shadow 1200ms ease-in-out,
+    opacity 000ms ease-in-out;
+    transition: box-shadow 1200ms ease-in-out;
+}
+header:hover ~ .shadow-effect,
+header:focus ~ .shadow-effect {
+    opacity: 1; 
+    box-shadow: -1.5rem 2rem 2rem .5rem #1119;
+}
+
+
+.z {display: none;}
+
+/* .Layout-Grid>.grid-box */
+/* grid */
+/* .Layout-Grid {
+    position: absolute;
+    top: 0; left: 0;
+    height: 11in; width: 8.5in;
+    background-color: #f002;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    z-index: -1;
+}
+.grid-box {
+    height: 1.1in; width: 1.7in;
+    box-shadow: inset 0 0 0 1px #f00;
+} */
+
